@@ -40,7 +40,7 @@
 		E10AD6E91EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_protocol_mvvmTests.swift; sourceTree = "<group>"; };
 		E10AD6EB1EC8A57E00B7FA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = ViewModels/CellRepresentable.swift; sourceTree = "<group>"; };
-		E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleViewModel.swift; path = Views/SampleViewModel.swift; sourceTree = "<group>"; };
+		E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleViewModel.swift; path = ViewModels/SampleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +114,7 @@
 		E10AD6F51EC8B90200B7FA3F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */,
 				E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */,
 			);
 			name = ViewModels;
@@ -122,7 +123,6 @@
 		E10AD6F61EC8B96400B7FA3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
