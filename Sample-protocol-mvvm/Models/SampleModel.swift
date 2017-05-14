@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct SampleModel {
+    var name: String = ""
+    var date: String = ""
+    var price: Double?
+}
