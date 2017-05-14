@@ -6,4 +6,10 @@
 //  Copyright © 2017年 Kohey. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class SampleTableViewCell: UITableViewCell {
+    func setup(viewModel: SampleViewModel) {
+        
+    }
+}
