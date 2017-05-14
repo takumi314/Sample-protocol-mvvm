@@ -13,6 +13,7 @@
 		E10AD6DC1EC8A57D00B7FA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10AD6DB1EC8A57D00B7FA3F /* Assets.xcassets */; };
 		E10AD6DF1EC8A57D00B7FA3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10AD6DD1EC8A57D00B7FA3F /* LaunchScreen.storyboard */; };
 		E10AD6EA1EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6E91EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift */; };
+		E10AD6F81EC8BD5D00B7FA3F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E10AD6E51EC8A57E00B7FA3F /* Sample-protocol-mvvmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sample-protocol-mvvmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10AD6E91EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_protocol_mvvmTests.swift; sourceTree = "<group>"; };
 		E10AD6EB1EC8A57E00B7FA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = ViewModels/CellRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		E10AD6F51EC8B90200B7FA3F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10AD6D71EC8A57D00B7FA3F /* ViewController.swift in Sources */,
+				E10AD6F81EC8BD5D00B7FA3F /* CellRepresentable.swift in Sources */,
 				E10AD6D51EC8A57D00B7FA3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
