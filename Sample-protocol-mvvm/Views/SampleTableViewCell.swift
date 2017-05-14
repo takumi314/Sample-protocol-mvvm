@@ -10,6 +10,7 @@ import UIKit
 
 class SampleTableViewCell: UITableViewCell {
     func setup(viewModel: SampleViewModel) {
-        
+        self.textLabel?.text = viewModel.sampleModel.name
+        self.detailTextLabel?.text = viewModel.sampleModel.date
     }
 }
