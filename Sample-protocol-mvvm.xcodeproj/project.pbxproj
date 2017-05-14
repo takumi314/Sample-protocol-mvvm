@@ -77,6 +77,7 @@
 		E10AD6D31EC8A57D00B7FA3F /* Sample-protocol-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				E10AD6F51EC8B90200B7FA3F /* ViewModels */,
 				E10AD6F41EC8B7A000B7FA3F /* Models */,
 				E10AD6D41EC8A57D00B7FA3F /* AppDelegate.swift */,
 				E10AD6D61EC8A57D00B7FA3F /* ViewController.swift */,
@@ -102,6 +103,13 @@
 			children = (
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		E10AD6F51EC8B90200B7FA3F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +428,7 @@
 				E10AD6F01EC8A57E00B7FA3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E10AD6F11EC8A57E00B7FA3F /* Build configuration list for PBXNativeTarget "Sample-protocol-mvvmTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +437,7 @@
 				E10AD6F31EC8A57E00B7FA3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
