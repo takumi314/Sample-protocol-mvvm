@@ -77,6 +77,7 @@
 		E10AD6D31EC8A57D00B7FA3F /* Sample-protocol-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				E10AD6F61EC8B96400B7FA3F /* Views */,
 				E10AD6F51EC8B90200B7FA3F /* ViewModels */,
 				E10AD6F41EC8B7A000B7FA3F /* Models */,
 				E10AD6D41EC8A57D00B7FA3F /* AppDelegate.swift */,
@@ -110,6 +111,13 @@
 			children = (
 			);
 			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		E10AD6F61EC8B96400B7FA3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
