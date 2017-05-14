@@ -16,6 +16,8 @@
 		E10AD6F81EC8BD5D00B7FA3F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */; };
 		E10AD6FA1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */; };
 		E10AD6FB1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */; };
+		E10AD6FD1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6FC1EC8C2FF00B7FA3F /* SampleTableViewCell.swift */; };
+		E10AD6FE1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6FC1EC8C2FF00B7FA3F /* SampleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 		E10AD6EB1EC8A57E00B7FA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = ViewModels/CellRepresentable.swift; sourceTree = "<group>"; };
 		E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleViewModel.swift; path = ViewModels/SampleViewModel.swift; sourceTree = "<group>"; };
+		E10AD6FC1EC8C2FF00B7FA3F /* SampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleTableViewCell.swift; path = Views/SampleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,7 @@
 		E10AD6F61EC8B96400B7FA3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E10AD6FC1EC8C2FF00B7FA3F /* SampleTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -234,6 +238,7 @@
 			files = (
 				E10AD6D71EC8A57D00B7FA3F /* ViewController.swift in Sources */,
 				E10AD6F81EC8BD5D00B7FA3F /* CellRepresentable.swift in Sources */,
+				E10AD6FD1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */,
 				E10AD6FA1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */,
 				E10AD6D51EC8A57D00B7FA3F /* AppDelegate.swift in Sources */,
 			);
@@ -244,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10AD6FB1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */,
+				E10AD6FE1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */,
 				E10AD6EA1EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
