@@ -1,5 +1,6 @@
-### https://raw.github.com/github/gitignore/44cbb3686c18f634a488ea123d1148ca9a64fa22/swift.gitignore
 
+
+# Added by gemignore. Snippet 'Swift'
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
@@ -67,5 +68,3 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
-
-
