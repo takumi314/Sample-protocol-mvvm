@@ -14,6 +14,8 @@
 		E10AD6DF1EC8A57D00B7FA3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10AD6DD1EC8A57D00B7FA3F /* LaunchScreen.storyboard */; };
 		E10AD6EA1EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6E91EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift */; };
 		E10AD6F81EC8BD5D00B7FA3F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */; };
+		E10AD70D1ECA00B200B7FA3F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10AD70C1ECA00B200B7FA3F /* RealmSwift.framework */; };
+		E10AD70F1ECA00C000B7FA3F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10AD70E1ECA00C000B7FA3F /* Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		E10AD6E91EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_protocol_mvvmTests.swift; sourceTree = "<group>"; };
 		E10AD6EB1EC8A57E00B7FA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = ViewModels/CellRepresentable.swift; sourceTree = "<group>"; };
+		E10AD70C1ECA00B200B7FA3F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		E10AD70E1ECA00C000B7FA3F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10AD70F1ECA00C000B7FA3F /* Realm.framework in Frameworks */,
+				E10AD70D1ECA00B200B7FA3F /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +70,7 @@
 				E10AD6D31EC8A57D00B7FA3F /* Sample-protocol-mvvm */,
 				E10AD6E81EC8A57E00B7FA3F /* Sample-protocol-mvvmTests */,
 				E10AD6D21EC8A57D00B7FA3F /* Products */,
+				E10AD70B1ECA00B100B7FA3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +130,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		E10AD70B1ECA00B100B7FA3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E10AD70E1ECA00C000B7FA3F /* Realm.framework */,
+				E10AD70C1ECA00B200B7FA3F /* RealmSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,6 +149,7 @@
 				E10AD6CD1EC8A57D00B7FA3F /* Sources */,
 				E10AD6CE1EC8A57D00B7FA3F /* Frameworks */,
 				E10AD6CF1EC8A57D00B7FA3F /* Resources */,
+				E10AD7101ECA00E100B7FA3F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -222,6 +239,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E10AD7101ECA00E100B7FA3F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E10AD6CD1EC8A57D00B7FA3F /* Sources */ = {
@@ -370,6 +405,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9D8UR7H9D4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Sample-protocol-mvvm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.kohey.Sample-protocol-mvvm";
@@ -383,6 +422,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9D8UR7H9D4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Sample-protocol-mvvm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.kohey.Sample-protocol-mvvm";
