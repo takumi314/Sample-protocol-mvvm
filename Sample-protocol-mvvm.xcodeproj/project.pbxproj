@@ -27,6 +27,8 @@
 		E131DC4D1ECB5ADF00465F4F /* AnyQuery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E131DC4C1ECB5ADF00465F4F /* AnyQuery.framework */; };
 		E131DC501ECB5D5500465F4F /* AnyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC4F1ECB5D5500465F4F /* AnyRepository.swift */; };
 		E131DC511ECB5D5500465F4F /* AnyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC4F1ECB5D5500465F4F /* AnyRepository.swift */; };
+		E131DC531ECB5DE200465F4F /* TaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC521ECB5DE200465F4F /* TaskObject.swift */; };
+		E131DC541ECB5DE200465F4F /* TaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC521ECB5DE200465F4F /* TaskObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,7 @@
 		E131DC4A1ECB5AD300465F4F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		E131DC4C1ECB5ADF00465F4F /* AnyQuery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyQuery.framework; path = Carthage/Build/iOS/AnyQuery.framework; sourceTree = "<group>"; };
 		E131DC4F1ECB5D5500465F4F /* AnyRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnyRepository.swift; path = Repositories/AnyRepository.swift; sourceTree = "<group>"; };
+		E131DC521ECB5DE200465F4F /* TaskObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskObject.swift; path = Repositories/TaskObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				E131DC4F1ECB5D5500465F4F /* AnyRepository.swift */,
+				E131DC521ECB5DE200465F4F /* TaskObject.swift */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -322,6 +326,7 @@
 			files = (
 				E10AD6D71EC8A57D00B7FA3F /* ViewController.swift in Sources */,
 				E10AD7031EC8C8B500B7FA3F /* SampleModel.swift in Sources */,
+				E131DC531ECB5DE200465F4F /* TaskObject.swift in Sources */,
 				E10AD6F81EC8BD5D00B7FA3F /* CellRepresentable.swift in Sources */,
 				E10AD6FD1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */,
 				E10AD6FA1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */,
@@ -339,6 +344,7 @@
 				E10AD70A1EC8D01500B7FA3F /* SampleViewController.swift in Sources */,
 				E10AD6FB1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */,
 				E10AD6FE1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */,
+				E131DC541ECB5DE200465F4F /* TaskObject.swift in Sources */,
 				E10AD6EA1EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift in Sources */,
 				E10AD7041EC8C8B500B7FA3F /* SampleModel.swift in Sources */,
 			);
