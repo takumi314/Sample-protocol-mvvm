@@ -14,8 +14,14 @@
 		E10AD6DF1EC8A57D00B7FA3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10AD6DD1EC8A57D00B7FA3F /* LaunchScreen.storyboard */; };
 		E10AD6EA1EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6E91EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift */; };
 		E10AD6F81EC8BD5D00B7FA3F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */; };
-		E10AD70D1ECA00B200B7FA3F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10AD70C1ECA00B200B7FA3F /* RealmSwift.framework */; };
-		E10AD70F1ECA00C000B7FA3F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10AD70E1ECA00C000B7FA3F /* Realm.framework */; };
+		E10AD6FA1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */; };
+		E10AD6FB1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */; };
+		E10AD6FD1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6FC1EC8C2FF00B7FA3F /* SampleTableViewCell.swift */; };
+		E10AD6FE1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD6FC1EC8C2FF00B7FA3F /* SampleTableViewCell.swift */; };
+		E10AD7031EC8C8B500B7FA3F /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD7021EC8C8B500B7FA3F /* SampleModel.swift */; };
+		E10AD7041EC8C8B500B7FA3F /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD7021EC8C8B500B7FA3F /* SampleModel.swift */; };
+		E10AD7091EC8D01500B7FA3F /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD7081EC8D01500B7FA3F /* SampleViewController.swift */; };
+		E10AD70A1EC8D01500B7FA3F /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AD7081EC8D01500B7FA3F /* SampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +46,10 @@
 		E10AD6E91EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_protocol_mvvmTests.swift; sourceTree = "<group>"; };
 		E10AD6EB1EC8A57E00B7FA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = ViewModels/CellRepresentable.swift; sourceTree = "<group>"; };
-		E10AD70C1ECA00B200B7FA3F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		E10AD70E1ECA00C000B7FA3F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleViewModel.swift; path = ViewModels/SampleViewModel.swift; sourceTree = "<group>"; };
+		E10AD6FC1EC8C2FF00B7FA3F /* SampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleTableViewCell.swift; path = Views/SampleTableViewCell.swift; sourceTree = "<group>"; };
+		E10AD7021EC8C8B500B7FA3F /* SampleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleModel.swift; path = Models/SampleModel.swift; sourceTree = "<group>"; };
+		E10AD7081EC8D01500B7FA3F /* SampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,15 +94,12 @@
 		E10AD6D31EC8A57D00B7FA3F /* Sample-protocol-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				E10AD7071EC8CFBC00B7FA3F /* Utilities */,
+				E10AD7061EC8CF8600B7FA3F /* Others */,
+				E10AD7051EC8CF5B00B7FA3F /* ViewControllers */,
 				E10AD6F61EC8B96400B7FA3F /* Views */,
 				E10AD6F51EC8B90200B7FA3F /* ViewModels */,
 				E10AD6F41EC8B7A000B7FA3F /* Models */,
-				E10AD6D41EC8A57D00B7FA3F /* AppDelegate.swift */,
-				E10AD6D61EC8A57D00B7FA3F /* ViewController.swift */,
-				E10AD6D81EC8A57D00B7FA3F /* Main.storyboard */,
-				E10AD6DB1EC8A57D00B7FA3F /* Assets.xcassets */,
-				E10AD6DD1EC8A57D00B7FA3F /* LaunchScreen.storyboard */,
-				E10AD6E01EC8A57D00B7FA3F /* Info.plist */,
 			);
 			path = "Sample-protocol-mvvm";
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 		E10AD6F41EC8B7A000B7FA3F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E10AD7021EC8C8B500B7FA3F /* SampleModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -118,6 +124,7 @@
 		E10AD6F51EC8B90200B7FA3F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */,
 				E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */,
 			);
 			name = ViewModels;
@@ -126,17 +133,37 @@
 		E10AD6F61EC8B96400B7FA3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E10AD6FC1EC8C2FF00B7FA3F /* SampleTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
 		};
-		E10AD70B1ECA00B100B7FA3F /* Frameworks */ = {
+		E10AD7051EC8CF5B00B7FA3F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E10AD70E1ECA00C000B7FA3F /* Realm.framework */,
-				E10AD70C1ECA00B200B7FA3F /* RealmSwift.framework */,
+				E10AD6DD1EC8A57D00B7FA3F /* LaunchScreen.storyboard */,
+				E10AD6D81EC8A57D00B7FA3F /* Main.storyboard */,
+				E10AD6D61EC8A57D00B7FA3F /* ViewController.swift */,
+				E10AD7081EC8D01500B7FA3F /* SampleViewController.swift */,
 			);
-			name = Frameworks;
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E10AD7061EC8CF8600B7FA3F /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				E10AD6D41EC8A57D00B7FA3F /* AppDelegate.swift */,
+				E10AD6DB1EC8A57D00B7FA3F /* Assets.xcassets */,
+				E10AD6E01EC8A57D00B7FA3F /* Info.plist */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		E10AD7071EC8CFBC00B7FA3F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10AD6D71EC8A57D00B7FA3F /* ViewController.swift in Sources */,
+				E10AD7031EC8C8B500B7FA3F /* SampleModel.swift in Sources */,
 				E10AD6F81EC8BD5D00B7FA3F /* CellRepresentable.swift in Sources */,
+				E10AD6FD1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */,
+				E10AD6FA1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */,
 				E10AD6D51EC8A57D00B7FA3F /* AppDelegate.swift in Sources */,
+				E10AD7091EC8D01500B7FA3F /* SampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10AD70A1EC8D01500B7FA3F /* SampleViewController.swift in Sources */,
+				E10AD6FB1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */,
+				E10AD6FE1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */,
 				E10AD6EA1EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift in Sources */,
+				E10AD7041EC8C8B500B7FA3F /* SampleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
