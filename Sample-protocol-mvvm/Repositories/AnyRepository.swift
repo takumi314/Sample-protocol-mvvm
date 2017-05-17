@@ -14,11 +14,3 @@ protocol Repository {
     func find(ID: UInt) -> Domain?
     func findAll() -> [Domain]
 }
-
-// MARK: - For Partial Updates
-
-public typealias PropertyValuePair = (name: String, value: Any)
-
-public protocol PropertyValueType {
-    var propertyValuePair: PropertyValuePair { get }
-}

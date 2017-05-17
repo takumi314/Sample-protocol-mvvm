@@ -19,3 +19,11 @@ protocol Persistable {
     init(managedObject: ManagedObject)
     func managedObject() -> ManagedObject
 }
+
+// MARK: - For Partial Updates
+
+public typealias PropertyValuePair = (name: String, value: Any)
+
+public protocol PropertyValueType {
+    var propertyValuePair: PropertyValuePair { get }
+}
