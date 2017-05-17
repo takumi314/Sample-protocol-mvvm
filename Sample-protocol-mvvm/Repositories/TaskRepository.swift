@@ -55,6 +55,12 @@ struct WriteTransaction {
         realm.create(T.ManagedObject.self, value: dictionary, update: true)
     }
 
+    // MARK: - Delete
+
+    func delete<T: Persistable>(_ value: T) {
+        realm.delete(value.managedObject())
+    }
+
 }
 
 struct FetchedResults<T: Persistable> {
