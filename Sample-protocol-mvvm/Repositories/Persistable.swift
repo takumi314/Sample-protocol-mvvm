@@ -16,6 +16,7 @@ import RealmSwift
 protocol Persistable {
     associatedtype ManagedObject: RealmSwift.Object
     associatedtype PropertyValue: PropertyValueType
+    associatedtype Query: QueryType
 
     init(managedObject: ManagedObject)
     func managedObject() -> ManagedObject
@@ -27,4 +28,11 @@ public typealias PropertyValuePair = (name: String, value: Any)
 
 public protocol PropertyValueType {
     var propertyValuePair: PropertyValuePair { get }
+}
+
+// MARK: - The internal representation of a query
+
+public protocol QueryType {
+    var predicate: NSPredicate? { get }
+    var sortDescriptors: [SortDescriptor] { get }
 }

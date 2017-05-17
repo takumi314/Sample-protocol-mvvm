@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct Task {
     var id = 0
@@ -53,6 +54,24 @@ extension Task: Persistable {
             case .content(let content):
                 return ("content", content)
             }
+        }
+    }
+
+    enum Query: QueryType {
+        case primaryKey(Int)
+        case taskName(String)
+
+        public var predicate: NSPredicate? {
+            switch self {
+            case .primaryKey(let ID):
+                return NSPredicate(format: "id == %d", ID)
+            case .taskName(let value):
+                return NSPredicate(format: "name == %@", value)
+            }
+        }
+
+        public var sortDescriptors: [SortDescriptor] {
+            return [SortDescriptor.init(keyPath: "name", ascending: true)]
         }
     }
 

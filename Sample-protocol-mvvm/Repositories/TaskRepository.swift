@@ -54,7 +54,25 @@ struct WriteTransaction {
         }
         realm.create(T.ManagedObject.self, value: dictionary, update: true)
     }
-    
+
+}
+
+struct FetchedResults<T: Persistable> {
+
+    let results: Results<T.ManagedObject>
+
+    var count: Int {
+        return results.count
+    }
+
+    internal init(results: Results<T.ManagedObject>) {
+        self.results = results
+    }
+
+    func value(at index: Int) -> T {
+        return T(managedObject: results[index])
+    }
+
 }
 
 struct Container {
@@ -74,6 +92,15 @@ struct Container {
         try realm.write {
             try block(transaction)
         }
+    }
+
+    func values<T: Persistable> (_ type: T.Type, matching query: T.Query) -> FetchedResults<T> {
+        var results = realm.objects(T.ManagedObject.self)
+        if let predicate = query.predicate {
+            results = results.filter(predicate)
+        }
+        results = results.sorted(by: query.sortDescriptors)
+        return FetchedResults(results: results)
     }
 
 }
