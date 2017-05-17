@@ -33,5 +33,24 @@ extension Task: Persistable {
         return object
     }
 
-}
+    enum PropertyValue: PropertyValueType {
+        case ID(Int)
+        case name(String)
+        case date(String)
+        case content(String)
 
+        public var propertyValuePair: PropertyValuePair {
+            switch self {
+            case .ID(let id):
+                return ("id", id)
+            case .name(let name):
+                return ("name", name)
+            case .date(let date):
+                return ("date", date)
+            case .content(let content):
+                return ("content", content)
+
+            }
+        }
+    }
+}

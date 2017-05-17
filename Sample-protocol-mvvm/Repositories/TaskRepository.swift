@@ -43,6 +43,17 @@ struct WriteTransaction {
     func add<T: Persistable>(_ value: T, update: Bool) {
         realm.add(value.managedObject(), update: update)
     }
+
+    // MARK: Updates
+
+    func update<T: Persistable>(_ type: T.Type, values: [T.PropertyValue]) {
+        var dictionary: [String: Any] = [:]
+        values.forEach {
+            let pair = $0.propertyValuePair
+            dictionary[pair.name] = pair.value
+        }
+        realm.create(T.ManagedObject.self, value: dictionary, update: true)
+    }
     
 }
 
