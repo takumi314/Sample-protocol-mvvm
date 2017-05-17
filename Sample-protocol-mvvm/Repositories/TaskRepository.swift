@@ -30,6 +30,22 @@ struct TaskRepository: Repository {
 /// The infrastructure to insert Task values inside a write transacion.
 ///
 
+struct WriteTransaction {
+
+    private let realm: Realm
+
+    internal init(realm: Realm) {
+        self.realm = realm
+    }
+
+    // MARK: Creation
+
+    func add<T: Persistable>(_ value: T, update: Bool) {
+        realm.add(value.managedObject(), update: update)
+    }
+    
+}
+
 struct Container {
 
     private let realm: Realm
@@ -43,26 +59,12 @@ struct Container {
     }
 
     func write(_ block: (WriteTransaction) throws -> Void) throws {
-            let transaction = WriteTransaction(realm: realm)
-            try realm.write {
-                try block(transaction)
-            }
+        let transaction = WriteTransaction(realm: realm)
+        try realm.write {
+            try block(transaction)
+        }
     }
 
-}
-
-struct WriteTransaction {
-
-    private let realm: Realm
-
-    internal init(realm: Realm) {
-        self.realm = realm
-    }
-
-    func add<T: Persistable>(_ value: T, update: Bool) {
-        realm.add(value.managedObject(), update: update)
-    }
-    
 }
 
 ///  # A Sample process
