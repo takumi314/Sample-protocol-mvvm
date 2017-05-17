@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 struct TaskRepository: Repository {
+
     typealias Domain = TaskObject
 
     func find(ID: UInt) -> TaskObject? {
@@ -23,3 +24,71 @@ struct TaskRepository: Repository {
     }
 
 }
+
+
+///
+/// The infrastructure to insert Task values inside a write transacion.
+///
+
+struct Container {
+
+    private let realm: Realm
+
+    init() throws {
+        try self.init(realm: Realm())
+    }
+
+    init(realm: Realm) {
+        self.realm = realm
+    }
+
+    func write(_ block: (WriteTransaction) throws -> Void) throws {
+            let transaction = WriteTransaction(realm: realm)
+            try realm.write {
+                try block(transaction)
+            }
+    }
+
+}
+
+struct WriteTransaction {
+
+    private let realm: Realm
+
+    internal init(realm: Realm) {
+        self.realm = realm
+    }
+
+    func add<T: Persistable>(_ value: T, update: Bool) {
+        realm.add(value.managedObject(), update: update)
+    }
+    
+}
+
+///  # A Sample process
+///
+///  let character = Character(
+///      identifier: 1455,
+///     name: "Iron Man",
+///      realName: "Tony Stark",
+///      publisher: Publisher(identifier: 1, name: "Marvel")
+///  )
+///
+///  let container = try! Container()
+///
+///  try! container.write { transaction in
+///      transaction.add(character)
+///  }
+
+
+
+
+
+
+
+
+
+
+
+
+
