@@ -9,6 +9,7 @@
 import Foundation
 
 struct Task {
+    var id = 0
     var name: String = ""
     var date: String = ""
     var content: String = ""
@@ -20,6 +21,7 @@ struct Task {
 extension Task: Persistable {
 
     init(managedObject: TaskObject) {
+        id = managedObject.id
         name = managedObject.name
         date = managedObject.date
         content = managedObject.content
@@ -27,6 +29,7 @@ extension Task: Persistable {
 
     func managedObject() -> TaskObject {
         let object = TaskObject()
+        object.id = id
         object.name = name
         object.date = date
         object.content = content
@@ -34,14 +37,14 @@ extension Task: Persistable {
     }
 
     enum PropertyValue: PropertyValueType {
-        case ID(Int)
+        case id(Int)
         case name(String)
         case date(String)
         case content(String)
 
         public var propertyValuePair: PropertyValuePair {
             switch self {
-            case .ID(let id):
+            case .id(let id):
                 return ("id", id)
             case .name(let name):
                 return ("name", name)
@@ -49,8 +52,8 @@ extension Task: Persistable {
                 return ("date", date)
             case .content(let content):
                 return ("content", content)
-
             }
         }
     }
+
 }
