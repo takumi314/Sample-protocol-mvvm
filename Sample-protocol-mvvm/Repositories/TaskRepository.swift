@@ -27,7 +27,7 @@ struct TaskRepository: Repository {
 
 
 ///
-/// The infrastructure to insert Task values inside a write transacion.
+/// The infrastructure to insert or update, delete Task values inside a write transacion.
 ///
 
 struct WriteTransaction {
