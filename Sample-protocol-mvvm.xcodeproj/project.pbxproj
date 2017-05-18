@@ -41,6 +41,8 @@
 		E131DC641ECDE8DC00465F4F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC631ECDE8DC00465F4F /* MasterViewController.swift */; };
 		E131DC691ECDEA9600465F4F /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC681ECDEA9600465F4F /* MasterTableViewCell.swift */; };
 		E131DC6A1ECDEA9600465F4F /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC681ECDEA9600465F4F /* MasterTableViewCell.swift */; };
+		E131DC6C1ECDEC6A00465F4F /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC6B1ECDEC6A00465F4F /* MasterViewModel.swift */; };
+		E131DC6D1ECDEC6A00465F4F /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC6B1ECDEC6A00465F4F /* MasterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,7 @@
 		E131DC611ECDE87300465F4F /* Master.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Master.storyboard; path = ViewControllers/Master.storyboard; sourceTree = "<group>"; };
 		E131DC631ECDE8DC00465F4F /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ViewControllers/MasterViewController.swift; sourceTree = "<group>"; };
 		E131DC681ECDEA9600465F4F /* MasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterTableViewCell.swift; path = Views/MasterTableViewCell.swift; sourceTree = "<group>"; };
+		E131DC6B1ECDEC6A00465F4F /* MasterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewModel.swift; path = ViewModels/MasterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,7 @@
 			children = (
 				E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */,
 				E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */,
+				E131DC6B1ECDEC6A00465F4F /* MasterViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -359,6 +363,7 @@
 				E131DC591ECB60DC00465F4F /* Task.swift in Sources */,
 				E131DC561ECB5EA200465F4F /* TaskRepository.swift in Sources */,
 				E131DC5C1ECB619400465F4F /* Persistable.swift in Sources */,
+				E131DC6C1ECDEC6A00465F4F /* MasterViewModel.swift in Sources */,
 				E10AD6FD1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */,
 				E10AD6FA1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */,
 				E131DC691ECDEA9600465F4F /* MasterTableViewCell.swift in Sources */,
@@ -379,6 +384,7 @@
 				E10AD6FB1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */,
 				E131DC5D1ECB619400465F4F /* Persistable.swift in Sources */,
 				E10AD6FE1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */,
+				E131DC6D1ECDEC6A00465F4F /* MasterViewModel.swift in Sources */,
 				E131DC541ECB5DE200465F4F /* TaskObject.swift in Sources */,
 				E131DC6A1ECDEA9600465F4F /* MasterTableViewCell.swift in Sources */,
 				E10AD6EA1EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift in Sources */,
