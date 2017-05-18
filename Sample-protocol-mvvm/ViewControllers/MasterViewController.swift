@@ -10,18 +10,30 @@ import UIKit
 
 class MasterViewController: UIViewController {
 
+    // IBOutlets
 
+    @IBOutlet weak var masterNavigationBar: UINavigationBar!
+    @IBOutlet weak var masterTitle: UINavigationItem!
     @IBOutlet weak var masterTableView: UITableView!
 
     // Init an empty cell representable array
     var data = [CellRepresentable]()
 
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        masterTitle.title = "Title"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    // MARK: - Actions
+
+    @IBAction func didTapRightBarButton(_ sender: UIBarButtonItem) {
+        //
     }
 
 }
