@@ -9,8 +9,8 @@
 import UIKit
 
 class MasterTableViewCell: UITableViewCell {
-
-    func setup(viewModel: SampleViewModel) {
+    func setup(viewModel: MasterViewModel) {
+        self.textLabel?.text = viewModel.task.name
+        self.detailTextLabel?.text = viewModel.content
     }
-
 }
