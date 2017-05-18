@@ -38,6 +38,7 @@
 		E131DC5F1ECCBDC100465F4F /* Task+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC5E1ECCBDC100465F4F /* Task+Persistable.swift */; };
 		E131DC601ECCBDC100465F4F /* Task+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC5E1ECCBDC100465F4F /* Task+Persistable.swift */; };
 		E131DC621ECDE87300465F4F /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E131DC611ECDE87300465F4F /* Master.storyboard */; };
+		E131DC641ECDE8DC00465F4F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC631ECDE8DC00465F4F /* MasterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		E131DC5B1ECB619400465F4F /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Persistable.swift; path = Repositories/Persistable.swift; sourceTree = "<group>"; };
 		E131DC5E1ECCBDC100465F4F /* Task+Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+Persistable.swift"; path = "Repositories/Task+Persistable.swift"; sourceTree = "<group>"; };
 		E131DC611ECDE87300465F4F /* Master.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Master.storyboard; path = ViewControllers/Master.storyboard; sourceTree = "<group>"; };
+		E131DC631ECDE8DC00465F4F /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ViewControllers/MasterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				E131DC611ECDE87300465F4F /* Master.storyboard */,
 				E10AD6D61EC8A57D00B7FA3F /* ViewController.swift */,
 				E10AD7081EC8D01500B7FA3F /* SampleViewController.swift */,
+				E131DC631ECDE8DC00465F4F /* MasterViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				E10AD6FA1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */,
 				E10AD6D51EC8A57D00B7FA3F /* AppDelegate.swift in Sources */,
 				E131DC501ECB5D5500465F4F /* AnyRepository.swift in Sources */,
+				E131DC641ECDE8DC00465F4F /* MasterViewController.swift in Sources */,
 				E10AD7091EC8D01500B7FA3F /* SampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
