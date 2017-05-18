@@ -13,8 +13,8 @@ class MasterViewController: UIViewController {
 
     @IBOutlet weak var masterTableView: UITableView!
 
-    // all of the data in the array conforms to the CellRepresentable protocol,
-    fileprivate var data = [CellRepresentable]()
+    // Init an empty cell representable array
+    var data = [CellRepresentable]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
