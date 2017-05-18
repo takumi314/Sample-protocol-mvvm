@@ -37,6 +37,7 @@
 		E131DC5D1ECB619400465F4F /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC5B1ECB619400465F4F /* Persistable.swift */; };
 		E131DC5F1ECCBDC100465F4F /* Task+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC5E1ECCBDC100465F4F /* Task+Persistable.swift */; };
 		E131DC601ECCBDC100465F4F /* Task+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC5E1ECCBDC100465F4F /* Task+Persistable.swift */; };
+		E131DC621ECDE87300465F4F /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E131DC611ECDE87300465F4F /* Master.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		E131DC581ECB60DC00465F4F /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Models/Task.swift; sourceTree = "<group>"; };
 		E131DC5B1ECB619400465F4F /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Persistable.swift; path = Repositories/Persistable.swift; sourceTree = "<group>"; };
 		E131DC5E1ECCBDC100465F4F /* Task+Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+Persistable.swift"; path = "Repositories/Task+Persistable.swift"; sourceTree = "<group>"; };
+		E131DC611ECDE87300465F4F /* Master.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Master.storyboard; path = ViewControllers/Master.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				E10AD6DD1EC8A57D00B7FA3F /* LaunchScreen.storyboard */,
 				E10AD6D81EC8A57D00B7FA3F /* Main.storyboard */,
+				E131DC611ECDE87300465F4F /* Master.storyboard */,
 				E10AD6D61EC8A57D00B7FA3F /* ViewController.swift */,
 				E10AD7081EC8D01500B7FA3F /* SampleViewController.swift */,
 			);
@@ -301,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E131DC621ECDE87300465F4F /* Master.storyboard in Resources */,
 				E10AD6DF1EC8A57D00B7FA3F /* LaunchScreen.storyboard in Resources */,
 				E10AD6DC1EC8A57D00B7FA3F /* Assets.xcassets in Resources */,
 				E10AD6DA1EC8A57D00B7FA3F /* Main.storyboard in Resources */,
