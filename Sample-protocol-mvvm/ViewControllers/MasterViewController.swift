@@ -17,15 +17,23 @@ class MasterViewController: UIViewController {
     @IBOutlet weak var masterTableView: UITableView!
 
     // Init an empty cell representable array
-    var data = [CellRepresentable]()
+    var data: [CellRepresentable] = []
+
+    var inputTask = Task()
 
     // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         masterTitle.title = "Title"
+        fetchAll()
         masterTableView.delegate = self
         masterTableView.dataSource = self
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        masterTableView.reloadData()
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
