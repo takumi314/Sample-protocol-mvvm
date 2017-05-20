@@ -35,39 +35,88 @@ class MasterViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func didTapRightBarButton(_ sender: UIBarButtonItem) {
-        //textの表示はalertのみ。ActionSheetだとtextfiledを表示させようとすると
-        //落ちます。
-        let alert = UIAlertController(title:"action",
-                                      message: "alertView",
+        let alert = UIAlertController(title:"Ragister",
+                                      message: "What is new task tiwh you ?",
                                       preferredStyle: UIAlertControllerStyle.alert)
-
         let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .cancel) { (action: UIAlertAction) in print("Cancel") }
+                                         style: .cancel) {(action: UIAlertAction) in
+                                            print("Cancel") }
         let defaultAction = UIAlertAction(title: "OK",
-                                          style: .default) { (action: UIAlertAction) in print("OK") }
+                                          style: .default) { [weak self] (action: UIAlertAction) in
+                                            if let task = self?.setInputValue(alert.textFields) {
+                                                self?.register(task)
+                                                print("OK")
+                                            }
+        }
         alert.addAction(cancelAction)
         alert.addAction(defaultAction)
-        
+
         //textfiledの追加
-        alert.addTextField(configurationHandler: {(text: UITextField) in
+        alert.addTextField(configurationHandler: { (text: UITextField) in
             //対象UITextFieldが引数として取得できる
             text.placeholder = "Task name"
+            text.tag = 1
         })
         //実行した分textfiledを追加される。
         alert.addTextField() { (content: UITextField) in
             content.placeholder = "Content"
+            content.tag = 2
         }
         alert.addTextField() { (date: UITextField) in
             date.placeholder = "Dur date"
+            date.tag = 3
         }
 
-        let register = { [weak self] in
+        present(alert, animated: true, completion: nil)
+    }
 
-            self?.masterTableView.reloadData()
+    func validation() -> Bool {
+        let isValid = true
+        // 文字数制限
+        // 有効値
+        return isValid
+    }
+
+    func setInputValue(_ textFields: [UITextField]?) -> Task? {
+        guard let textFields = textFields else {
+            return nil
         }
+        var task = Task()
+        let _ = textFields
+            .flatMap { (textField: UITextField) in
+                switch textField.tag {
+                case 1:
+                    task.name = textField.text ?? "No title"
+                case 2:
+                    task.content = textField.text ?? "No content"
+                case 3:
+                    task.date = textField.text ?? "No date"
+                default: break
+                }
+        }
+        print(task)
+        return task
+    }
 
+    func register(_ task: Task) {
+        // Validation
 
-        present(alert, animated: true, completion: register as? () -> Void)
+        let container = try? Container()
+        try? container?.write { transaction in
+            transaction.add(task, update: false)
+        }
+        fetchAll()
+        masterTableView.reloadData()
+    }
+
+    func fetchAll() {
+        let container = try! Container()
+        data = container
+                .values(Task.self, matching: .taskName(""))
+                .results
+                .flatMap {
+                    MasterViewModel(task: Task(managedObject: $0))
+                }
     }
 
 }
