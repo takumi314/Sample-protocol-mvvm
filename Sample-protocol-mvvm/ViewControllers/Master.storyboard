@@ -25,13 +25,33 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MasterCell" rowHeight="62" id="Fdb-Zw-gXI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MasterCell" rowHeight="62" id="Fdb-Zw-gXI" customClass="MasterTableViewCell" customModule="Sample_protocol_mvvm" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fdb-Zw-gXI" id="7YY-1Z-YUH" customClass="MasterTableViewCell" customModule="Sample_protocol_mvvm" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByZ-5C-4T7">
+                                                    <rect key="frame" x="244" y="21" width="116" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVd-Ll-iHS">
+                                                    <rect key="frame" x="13" y="8" width="154" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="ByZ-5C-4T7" id="ok6-ox-5Bz"/>
+                                            <outlet property="titleLabel" destination="xVd-Ll-iHS" id="JOf-8L-6Ee"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

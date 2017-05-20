@@ -9,8 +9,13 @@
 import UIKit
 
 class MasterTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
+
     func setup(viewModel: MasterViewModel) {
-        self.textLabel?.text = viewModel.task.name
-        self.detailTextLabel?.text = viewModel.content
+        titleLabel.text = viewModel.task.name
+        contentLabel.text = viewModel.content
     }
+
 }
