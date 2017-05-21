@@ -14,7 +14,6 @@ extension Task: Persistable {
     // MARK: - Mapping
 
     init(managedObject: TaskObject) {
-        id = managedObject.id
         name = managedObject.name
         date = managedObject.date
         content = managedObject.content
@@ -22,7 +21,6 @@ extension Task: Persistable {
 
     func managedObject() -> TaskObject {
         let object = TaskObject()
-        object.id = id
         object.name = name
         object.date = date
         object.content = content

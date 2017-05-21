@@ -37,6 +37,14 @@
 		E131DC5D1ECB619400465F4F /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC5B1ECB619400465F4F /* Persistable.swift */; };
 		E131DC5F1ECCBDC100465F4F /* Task+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC5E1ECCBDC100465F4F /* Task+Persistable.swift */; };
 		E131DC601ECCBDC100465F4F /* Task+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC5E1ECCBDC100465F4F /* Task+Persistable.swift */; };
+		E131DC621ECDE87300465F4F /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E131DC611ECDE87300465F4F /* Master.storyboard */; };
+		E131DC641ECDE8DC00465F4F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC631ECDE8DC00465F4F /* MasterViewController.swift */; };
+		E131DC691ECDEA9600465F4F /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC681ECDEA9600465F4F /* MasterTableViewCell.swift */; };
+		E131DC6A1ECDEA9600465F4F /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC681ECDEA9600465F4F /* MasterTableViewCell.swift */; };
+		E131DC6C1ECDEC6A00465F4F /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC6B1ECDEC6A00465F4F /* MasterViewModel.swift */; };
+		E131DC6D1ECDEC6A00465F4F /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC6B1ECDEC6A00465F4F /* MasterViewModel.swift */; };
+		E131DC6F1ECF505700465F4F /* UITextFieldExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC6E1ECF505600465F4F /* UITextFieldExtendable.swift */; };
+		E131DC701ECF505700465F4F /* UITextFieldExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131DC6E1ECF505600465F4F /* UITextFieldExtendable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +82,11 @@
 		E131DC581ECB60DC00465F4F /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Models/Task.swift; sourceTree = "<group>"; };
 		E131DC5B1ECB619400465F4F /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Persistable.swift; path = Repositories/Persistable.swift; sourceTree = "<group>"; };
 		E131DC5E1ECCBDC100465F4F /* Task+Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+Persistable.swift"; path = "Repositories/Task+Persistable.swift"; sourceTree = "<group>"; };
+		E131DC611ECDE87300465F4F /* Master.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Master.storyboard; path = ViewControllers/Master.storyboard; sourceTree = "<group>"; };
+		E131DC631ECDE8DC00465F4F /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ViewControllers/MasterViewController.swift; sourceTree = "<group>"; };
+		E131DC681ECDEA9600465F4F /* MasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterTableViewCell.swift; path = Views/MasterTableViewCell.swift; sourceTree = "<group>"; };
+		E131DC6B1ECDEC6A00465F4F /* MasterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewModel.swift; path = ViewModels/MasterViewModel.swift; sourceTree = "<group>"; };
+		E131DC6E1ECF505600465F4F /* UITextFieldExtendable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextFieldExtendable.swift; path = ViewControllers/UITextFieldExtendable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +166,7 @@
 			children = (
 				E10AD6F91EC8BFDB00B7FA3F /* SampleViewModel.swift */,
 				E10AD6F71EC8BD5D00B7FA3F /* CellRepresentable.swift */,
+				E131DC6B1ECDEC6A00465F4F /* MasterViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -160,6 +174,7 @@
 		E10AD6F61EC8B96400B7FA3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E131DC681ECDEA9600465F4F /* MasterTableViewCell.swift */,
 				E10AD6FC1EC8C2FF00B7FA3F /* SampleTableViewCell.swift */,
 			);
 			name = Views;
@@ -170,8 +185,11 @@
 			children = (
 				E10AD6DD1EC8A57D00B7FA3F /* LaunchScreen.storyboard */,
 				E10AD6D81EC8A57D00B7FA3F /* Main.storyboard */,
+				E131DC611ECDE87300465F4F /* Master.storyboard */,
 				E10AD6D61EC8A57D00B7FA3F /* ViewController.swift */,
 				E10AD7081EC8D01500B7FA3F /* SampleViewController.swift */,
+				E131DC631ECDE8DC00465F4F /* MasterViewController.swift */,
+				E131DC6E1ECF505600465F4F /* UITextFieldExtendable.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -301,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E131DC621ECDE87300465F4F /* Master.storyboard in Resources */,
 				E10AD6DF1EC8A57D00B7FA3F /* LaunchScreen.storyboard in Resources */,
 				E10AD6DC1EC8A57D00B7FA3F /* Assets.xcassets in Resources */,
 				E10AD6DA1EC8A57D00B7FA3F /* Main.storyboard in Resources */,
@@ -344,14 +363,18 @@
 				E131DC5F1ECCBDC100465F4F /* Task+Persistable.swift in Sources */,
 				E10AD7031EC8C8B500B7FA3F /* SampleModel.swift in Sources */,
 				E131DC531ECB5DE200465F4F /* TaskObject.swift in Sources */,
+				E131DC6F1ECF505700465F4F /* UITextFieldExtendable.swift in Sources */,
 				E10AD6F81EC8BD5D00B7FA3F /* CellRepresentable.swift in Sources */,
 				E131DC591ECB60DC00465F4F /* Task.swift in Sources */,
 				E131DC561ECB5EA200465F4F /* TaskRepository.swift in Sources */,
 				E131DC5C1ECB619400465F4F /* Persistable.swift in Sources */,
+				E131DC6C1ECDEC6A00465F4F /* MasterViewModel.swift in Sources */,
 				E10AD6FD1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */,
 				E10AD6FA1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */,
+				E131DC691ECDEA9600465F4F /* MasterTableViewCell.swift in Sources */,
 				E10AD6D51EC8A57D00B7FA3F /* AppDelegate.swift in Sources */,
 				E131DC501ECB5D5500465F4F /* AnyRepository.swift in Sources */,
+				E131DC641ECDE8DC00465F4F /* MasterViewController.swift in Sources */,
 				E10AD7091EC8D01500B7FA3F /* SampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,10 +386,13 @@
 				E131DC511ECB5D5500465F4F /* AnyRepository.swift in Sources */,
 				E10AD70A1EC8D01500B7FA3F /* SampleViewController.swift in Sources */,
 				E131DC571ECB5EA200465F4F /* TaskRepository.swift in Sources */,
+				E131DC701ECF505700465F4F /* UITextFieldExtendable.swift in Sources */,
 				E10AD6FB1EC8BFDB00B7FA3F /* SampleViewModel.swift in Sources */,
 				E131DC5D1ECB619400465F4F /* Persistable.swift in Sources */,
 				E10AD6FE1EC8C2FF00B7FA3F /* SampleTableViewCell.swift in Sources */,
+				E131DC6D1ECDEC6A00465F4F /* MasterViewModel.swift in Sources */,
 				E131DC541ECB5DE200465F4F /* TaskObject.swift in Sources */,
+				E131DC6A1ECDEA9600465F4F /* MasterTableViewCell.swift in Sources */,
 				E10AD6EA1EC8A57E00B7FA3F /* Sample_protocol_mvvmTests.swift in Sources */,
 				E131DC5A1ECB60DC00465F4F /* Task.swift in Sources */,
 				E10AD7041EC8C8B500B7FA3F /* SampleModel.swift in Sources */,

@@ -9,6 +9,11 @@
 import UIKit
 
 class SampleTableViewCell: UITableViewCell {
+
+    ///
+    /// Formats the data
+    ///
+
     func setup(viewModel: SampleViewModel) {
         self.textLabel?.text = viewModel.sampleModel.name
         self.detailTextLabel?.text = viewModel.sampleModel.date

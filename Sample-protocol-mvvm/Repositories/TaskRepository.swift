@@ -109,6 +109,11 @@ struct Container {
         return FetchedResults(results: results)
     }
 
+    func allValues<T: Persistable>(_ type: T.Type) -> FetchedResults<T> {
+        let objects = realm.objects(T.ManagedObject.self)
+        return FetchedResults(results: objects)
+    }
+
 }
 
 ///  # A Sample process
