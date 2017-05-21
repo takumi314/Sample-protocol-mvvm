@@ -9,7 +9,6 @@
 import Foundation
 
 struct Task {
-    var id = 0
     var name: String = ""
     var date: String = ""
     var content: String = ""
