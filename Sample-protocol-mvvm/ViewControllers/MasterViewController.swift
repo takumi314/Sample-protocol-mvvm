@@ -44,54 +44,55 @@ class MasterViewController: UIViewController {
 
     @IBAction func didTapRightBarButton(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title:"Ragister",
-                                      message: "What is new task tiwh you ?",
+                                      message: "What is new task with you ?",
                                       preferredStyle: UIAlertControllerStyle.alert)
         let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .cancel) {(action: UIAlertAction) in
-                                            print("Cancel") }
+                                         style: .cancel) {(action: UIAlertAction) -> () in }
         let defaultAction = UIAlertAction(title: "OK",
                                           style: .default) { [weak self] (action: UIAlertAction) in
                                                 self?.executeOKAction(alert)
-                                                print("OK")
-        }
+                                            }
         alert.addAction(cancelAction)
         alert.addAction(defaultAction)
-
-        //textfiledの追加
         alert.addTextField(configurationHandler: { (text: UITextField) in
-            //対象UITextFieldが引数として取得できる
             text.placeholder = "Task name"
             text.tag = 1
         })
-        //実行した分textfiledを追加される。
         alert.addTextField() { (content: UITextField) in
             content.placeholder = "Content"
             content.tag = 2
         }
         alert.addTextField() { (date: UITextField) in
-            date.placeholder = "Dur date"
+            date.placeholder = "Due date"
             date.tag = 3
         }
 
         present(alert, animated: true, completion: nil)
     }
 
-    func validation() -> Bool {
-        let isValid = true
-        // 文字数制限
-        // 有効値
-        return isValid
+    func isInvalid<T: UITextField>(_ textFields: [T]?) -> Bool {
+        guard let textFeilds = textFields else {
+            return true
+        }
+        if textFeilds.filter({ $0.validation() }).count != textFeilds.count {
+            return true
+        }
+        return false
     }
 
     func executeOKAction(_ alert: UIAlertController) {
-        if let task = setInputValue(alert.textFields) {
-            register(task)
-            fetchAll()
-            masterTableView.reloadData()
+        if isInvalid(alert.textFields) {
+            return
         }
+        guard let task = setInputValue(of: alert.textFields) else {
+            return
+        }
+        register(task)
+        fetchAll()
+        masterTableView.reloadData()
     }
 
-    func setInputValue(_ textFields: [UITextField]?) -> Task? {
+    func setInputValue(of textFields: [UITextField]?) -> Task? {
         guard let textFields = textFields else {
             return nil
         }
@@ -108,13 +109,13 @@ class MasterViewController: UIViewController {
                 default: break
                 }
         }
-        print(task)
         return task
     }
 
-    func register(_ task: Task) {
-        // Validation
-
+    func register(_ task: Task?) {
+        guard let task = task else {
+            return
+        }
         let container = try? Container()
         try? container?.write { transaction in
             transaction.add(task, update: false)
