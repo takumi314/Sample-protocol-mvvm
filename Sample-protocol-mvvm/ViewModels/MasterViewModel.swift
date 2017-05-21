@@ -12,7 +12,7 @@ class MasterViewModel: CellRepresentable {
 
     var rowHeight: CGFloat {
         get {
-            return 50.0
+            return 60.0
         }
     }
 
