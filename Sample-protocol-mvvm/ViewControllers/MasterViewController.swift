@@ -119,16 +119,13 @@ class MasterViewController: UIViewController {
         try? container?.write { transaction in
             transaction.add(task, update: false)
         }
-        fetchAll()
-        masterTableView.reloadData()
     }
 
     func fetchAll() {
         let container = try! Container()
         data = container
-                .values(Task.self, matching: .taskName(""))
-                .results
-                .flatMap {
+                .allValues(Task.self)
+                .results.flatMap {
                     MasterViewModel(task: Task(managedObject: $0))
                 }
     }
