@@ -51,10 +51,8 @@ class MasterViewController: UIViewController {
                                             print("Cancel") }
         let defaultAction = UIAlertAction(title: "OK",
                                           style: .default) { [weak self] (action: UIAlertAction) in
-                                            if let task = self?.setInputValue(alert.textFields) {
-                                                self?.register(task)
+                                                self?.executeOKAction(alert)
                                                 print("OK")
-                                            }
         }
         alert.addAction(cancelAction)
         alert.addAction(defaultAction)
@@ -83,6 +81,14 @@ class MasterViewController: UIViewController {
         // 文字数制限
         // 有効値
         return isValid
+    }
+
+    func executeOKAction(_ alert: UIAlertController) {
+        if let task = setInputValue(alert.textFields) {
+            register(task)
+            fetchAll()
+            masterTableView.reloadData()
+        }
     }
 
     func setInputValue(_ textFields: [UITextField]?) -> Task? {
